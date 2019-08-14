@@ -7,12 +7,12 @@ edition = "2018"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-actix-web = "1.0.5"
-actix-multipart = "0.1.2"
 env_logger = "0.6.2"
 envy = "0.4.0"
 log = "0.4.8"
 snafu = "0.4.3"
-serde = "1.0.98"
-futures = "0.1.28"
-actix-files = "0.1.4"
+serde = { version = "1.0.98", features = ["derive"] }
+warp = "0.1.18"
+futures01 = { package = "futures", version = "0.1.28" }
+tokio = "=0.2.0-alpha.1"
+futures-preview = { version = "=0.3.0-alpha.17", features = ["async-await", "nightly", "compat"] }
